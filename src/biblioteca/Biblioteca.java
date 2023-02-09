@@ -39,7 +39,7 @@ public class Biblioteca {
 	
 	public void cercaLibro(String isbn) {
 		for(int i=0; i<libri.length; i++) {
-			if(libri[i].getIsbn() == isbn) {
+			if(libri[i].getIsbn().equals(isbn)) {
 				System.out.println(libri[i].toString());
 			}
 		}
@@ -47,7 +47,7 @@ public class Biblioteca {
 	
 	public void rimuovereLibro(String isbn) {
 		for(int i=0; i<this.libri.length; i++) {
-			if(libri[i].getIsbn() == isbn) {
+			if(libri[i].getIsbn().equals(isbn)) {
 				libri[i] = null;
 			}
 		}

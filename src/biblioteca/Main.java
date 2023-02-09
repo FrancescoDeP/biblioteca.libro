@@ -3,8 +3,6 @@ package biblioteca;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		Libro[] libri = new Libro[15];
 
 		Libro l1 = new Libro("Java Academy", "J.R.", 100, "1");
 		Libro l2 = new Libro("JavaScript", "P.R.", 79, "2");

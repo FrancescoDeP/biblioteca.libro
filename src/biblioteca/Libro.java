@@ -7,6 +7,10 @@ public class Libro {
 	private int pagine;
 	private String isbn;
 	
+	public Libro() {
+		
+	}
+	
 	public Libro(String titolo, String autore, int pagine, String isbn) {
 		this.titolo = titolo;
 		this.autore = autore;
@@ -14,8 +18,6 @@ public class Libro {
 		this.isbn = isbn;
 	}
 	
-	
-
 	public String getTitolo() {
 		return titolo;
 	}
