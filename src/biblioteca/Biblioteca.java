@@ -9,7 +9,7 @@ public class Biblioteca {
 		libri = new Libro[15];
 	}
 	
-	public void aumentaCapienza() {
+	private void aumentaCapienza() {
 		Libro[] array = new Libro[libri.length + 1];
 		for(int i=0; i<libri.length; i++) {
 			array[i] = libri[i];
@@ -37,18 +37,29 @@ public class Biblioteca {
 		}
 	}
 	
-	public void cercaLibro(String isbn) {
+	public Libro cercaLibro(String isbn) {
 		for(int i=0; i<libri.length; i++) {
 			if(libri[i].getIsbn().equals(isbn)) {
-				System.out.println(libri[i].toString());
+				return libri[i];
 			}
 		}
+		return null;
 	}
 	
 	public void rimuovereLibro(String isbn) {
 		for(int i=0; i<this.libri.length; i++) {
 			if(libri[i].getIsbn().equals(isbn)) {
 				libri[i] = null;
+			}
+		}
+		riordinaLibri();
+	}
+	
+	private void riordinaLibri() {
+		for(int i=0; i<libri.length-1; i++) {
+			if(libri[i] == null) {
+				libri[i] = libri[i+1];
+				libri[i+1] = null;
 			}
 		}
 	}
